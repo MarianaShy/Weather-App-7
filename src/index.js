@@ -1,1 +1,0 @@
-alert("Would you like to check the weather?");
