@@ -27,6 +27,10 @@ function showWeather(response) {
 	document.querySelector("#sky").innerHTML = response.data.weather[0].description;
 	document.querySelector("h1").innerHTML = response.data.name;
 	document.querySelector("#date").innerHTML = formData(response.data.dt * 1000);
+	let mainIcon = document.querySelector("#main-icon");
+	mainIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+	mainIcon.setAttribute("alt", response.data.weather[0].main);
+
 };
 function getLocation(position){
 	let apiKeys = "b83c1d0ca2d9e65fec290817b578d80d";
