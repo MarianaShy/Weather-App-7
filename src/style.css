@@ -1,8 +1,11 @@
-
+html{
+	background-color: #f9f7fe;
+	scroll-behavior: smooth;
+}
 .container{
 	margin: 40px auto;
 	padding: 0 12px 0 12px;
-	background-color: #fff;
+	background-color: #f9f7fe;
 }
 .weather-app{
 	background: #fff;
@@ -38,5 +41,109 @@
     font-size: 16px;
     font-weight: 700;
     height: 50px;
-    padding: 15px 0;
+	 padding: 0;
+}
+.button-container{
+	padding: 0;
+}
+.main{
+	padding: 0;
+}
+.weather-forecast{
+	padding: 0 0 0 50px;
+	margin: 40px 0;
+}
+.main__city-name {    
+	color: #272142;
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 48px;
+	margin: 20px 0 10px;
+}
+.main__properties {
+	color: #878787;
+	font-family: Cerebri-Sans,Helvetica,Arial,sans-serif;
+	padding: 0;
+	color: rgba(39,33,66,.4);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	list-style: none;
+	margin-bottom: 5px;
+}
+ul{
+		display: block;
+		list-style-type: none;
+		
+   }
+li{
+	margin-bottom: 5px;
+}
+.weather-logo{
+	width: 52px;
+	margin: 10px 0;
+}
+.red{
+	color: red;
+}
+.main__temperature{
+	color: #212121;
+	font-size: 80px;
+	font-weight: 400;
+	font-weight: 700;
+	line-height: 1;
+	margin-left: 10px;
+}
+.main__right{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	
+}
+.forecast{
+	border-bottom: 1px solid #f9f7fe;
+	margin: 40px 0;
+	padding-bottom: 50px;
+	text-align: center;
+}
+.forecast__flex{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.forecast__day{
+	color: rgba(39,33,66,.4);
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+}
+.forecast__logo{
+	display: block;
+	margin: 20px auto;
+}
+.forecast__max-temp{
+	color: #f65282;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.5;
+}
+.forecast__min-temp{
+	color: #f65282;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.5;
+	margin-left: 10px;
+    opacity: .6;
+}
+.weather-footer{
+	color: rgba(39,33,66,.4);
+	font-size: 14px;
+	line-height: 18px;
+	margin-top: 40px;
+	text-align: center;
+}
+.weather-footer a {
+	color: #885df1;
 }

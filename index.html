@@ -19,91 +19,92 @@
 						<div class="col-9">
 							<input type="text" placeholder="Enter a city.." class="form-control search-input search__input">
 						</div>
-						<div class="col-3">
+						<div class="col-3 button-container">
 							<input type="submit" class="btn btn-primary w-100 search__button" value="Search">
 						</div>
 					</div>
 				</form>
-				<div class="weather-description">
-					<div class="row">
-						<div class="col-6">
-						<h1>San Francisco</h1>
-						<ul>
+				<div class="main">
+					<div class="row main__left">
+						<div class="col-6 ">
+						<h1 class="main__city-name">San Francisco</h1>
+						<ul class="main__properties">
 							<li>Saturday 21:02, <span>overcast clouds</span></li>
-							<li>Humidity: <span>69</span>%, Wind: <span>2.57</span>km/h</li>
+							<li>Humidity: <span class="red"><span>69</span>%</span>, Wind: <spam class="red"><span>2.57</span>km/h</spam></li>
 						</ul>
 						</div>
-						<div class="col-6">
-							15°C
+						<div class="col-6 main__right">
+							<span class="main__logo"><img src="/src/img/download.png" alt="sun"></span>
+							<span class=""><span class="main__temperature">15</span>°C</span>
 						</div>
 					</div>
 				</div>
-				<div class="weather-forecast">
-					<div class="row">
-						<div class="col">
-							<div class="forecast-date">
-								Monday
+				<div class="forecast">
+					<div class="forecast__flex">
+						<div class="forecast__item">
+							<div class="forecast__day">
+								Mon
 							</div>
-							<img src="#" alt="icon">
-							<div class="forecast-temperature">
-								<span>15</span>
-								<span>9</span>
-							</div>
-						</div>
-						<div class="col">
-							<div class="forecast-date">
-								Monday
-							</div>
-							<img src="#" alt="icon">
-							<div class="forecast-temperature">
-								<span>15</span>
-								<span>9</span>
+							<img src="/src/img/download.png" alt="icon" class="forecast__logo">
+							<div class="forecast__temperature">
+								<span class="forecast__max-temp">15</span>
+								<span class="forecast__min-temp">9</span>
 							</div>
 						</div>
 						<div class="col">
-							<div class="forecast-date">
-								Monday
+							<div class="forecast__day">
+								Mon
 							</div>
-							<img src="#" alt="icon">
-							<div class="forecast-temperature">
-								<span>15</span>
-								<span>9</span>
-							</div>
-						</div>
-						<div class="col">
-							<div class="forecast-date">
-								Monday
-							</div>
-							<img src="#" alt="icon">
-							<div class="forecast-temperature">
-								<span>15</span>
-								<span>9</span>
+							<img src="/src/img/download.png" alt="icon" class="forecast__logo">
+							<div class="forecast__temperature">
+								<span class="forecast__max-temp">15</span>
+								<span class="forecast__min-temp">9</span>
 							</div>
 						</div>
 						<div class="col">
-							<div class="forecast-date">
-								Monday
+							<div class="forecast__day">
+								Mon
 							</div>
-							<img src="#" alt="icon">
-							<div class="forecast-temperature">
-								<span>15</span>
-								<span>9</span>
+							<img src="/src/img/download.png" alt="icon" class="forecast__logo">
+							<div class="forecast__temperature">
+								<span class="forecast__max-temp">15</span>
+								<span class="forecast__min-temp">9</span>
 							</div>
 						</div>
 						<div class="col">
-							<div class="forecast-date">
-								Monday
+							<div class="forecast__day">
+								Mon
 							</div>
-							<img src="#" alt="icon">
-							<div class="forecast-temperature">
-								<span>15</span>
-								<span>9</span>
+							<img src="/src/img/download.png" alt="icon" class="forecast__logo">
+							<div class="forecast__temperature">
+								<span class="forecast__max-temp">15</span>
+								<span class="forecast__min-temp">9</span>
+							</div>
+						</div>
+						<div class="col">
+							<div class="forecast__day">
+								Mon
+							</div>
+							<img src="/src/img/download.png" alt="icon" class="forecast__logo">
+							<div class="forecast__temperature">
+								<span class="forecast__max-temp">15</span>
+								<span class="forecast__min-temp">9</span>
+							</div>
+						</div>
+						<div class="col">
+							<div class="forecast__day">
+								Mon
+							</div>
+							<img src="/src/img/download.png" alt="icon" class="forecast__logo">
+							<div class="forecast__temperature">
+								<span class="forecast__max-temp">15</span>
+								<span class="forecast__min-temp">9</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<footer>
-					<div>
+					<div class="weather-footer">
 						This page was coded by
 						<a href="https://www.linkedin.com/in/mariana-shy">Mariana Shydlovska</a>
 						and is
