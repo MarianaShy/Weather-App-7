@@ -1,5 +1,13 @@
 
+function formData(timeStamp){
+	let date = new Date(timeStamp);
+	let hours = date.getHours();
+	let minutes = date.getMinutes();
+	let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+	let day = days[date.getDay()];
+	return `${day} ${hours}:${minutes}`;
 
+}
 
 //search engine
 function search(city){
@@ -16,8 +24,9 @@ function showWeather(response) {
 	document.querySelector("#current-temperature").innerHTML = Math.round(response.data.main.temp);
 	document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
 	document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
-	document.querySelector("#sky").innerHTML = response.data.weather[0].main;
+	document.querySelector("#sky").innerHTML = response.data.weather[0].description;
 	document.querySelector("h1").innerHTML = response.data.name;
+	document.querySelector("#date").innerHTML = formData(response.data.dt * 1000);
 };
 function getLocation(position){
 	let apiKeys = "b83c1d0ca2d9e65fec290817b578d80d";

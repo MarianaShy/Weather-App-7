@@ -112,7 +112,7 @@ li::first-letter{
 .forecast{
 	border-bottom: 1px solid #f9f7fe;
 	margin: 40px 0;
-	padding-bottom: 50px;
+	padding-bottom: 10px;
 	text-align: center;
 }
 .forecast__flex{
