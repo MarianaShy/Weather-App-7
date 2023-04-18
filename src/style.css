@@ -84,6 +84,10 @@ ul{
 li{
 	margin-bottom: 5px;
 }
+li::first-letter{
+	text-transform: capitalize;
+
+}
 .weather-logo{
 	width: 52px;
 	margin: 10px 0;

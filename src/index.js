@@ -18,7 +18,6 @@ function showWeather(response) {
 	document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
 	document.querySelector("#sky").innerHTML = response.data.weather[0].main;
 	document.querySelector("h1").innerHTML = response.data.name;
-	console.log(response.data);
 };
 function getLocation(position){
 	let apiKeys = "b83c1d0ca2d9e65fec290817b578d80d";
