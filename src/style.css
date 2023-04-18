@@ -109,13 +109,26 @@ li::first-letter{
 	justify-content: flex-end;	
 }
 .units{
-	color: #212121;
+	color: #212121c4;
 	font-size: 28px;
 	font-weight: 400;
 	line-height: 36px;
 	line-height: 1;
 	position: relative;
 	top: -16px;
+}
+.units a {
+	text-decoration: none;
+}
+.units a:hover {
+color: #885df1;
+}
+.main .active {
+	color: #212121;
+	cursor: default;
+}
+.main .active:hover {
+	color: #212121;
 }
 .forecast{
 	border-bottom: 1px solid #f9f7fe;
@@ -152,8 +165,9 @@ li::first-letter{
 	font-weight: 700;
 	line-height: 1.5;
 	margin-left: 10px;
-    opacity: .6;
+   opacity: .6;
 }
+
 .weather-footer{
 	color: rgba(39,33,66,.4);
 	font-size: 14px;
