@@ -54,6 +54,12 @@ body{
 .main{
 	padding: 0;
 }
+.main__flex{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
 .weather-forecast{
 	padding: 0 0 0 50px;
 	margin: 40px 0;
@@ -103,7 +109,7 @@ li::first-letter{
 	line-height: 1;
 	margin-left: 10px;
 }
-.main__right{
+.main__flex-right{
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;	
@@ -177,4 +183,22 @@ color: #885df1;
 }
 .weather-footer a {
 	color: #885df1;
+}
+
+@media (max-width:767px) {
+	.weather-app{min-width: 382px;
+	}
+	.header-logo{
+		display: block;
+		margin: 0 auto;
+	}
+	.main__flex{
+		justify-content: center;
+	}
+	.main {
+		text-align: center;
+	}
+	.forecast__min-temp{
+		display: none;
+	}
 }

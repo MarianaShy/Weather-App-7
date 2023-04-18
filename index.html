@@ -13,7 +13,7 @@
 	<div class="app">
 		<div class="container">
 			<div class="weather-app">
-				<div><a href="https://www.shecodes.io/"><img src="https://www.shecodes.io/assets/branding/logo-shecodes-f9fa0540d113c086f61eb6e89466c0cbd24a42163b6a96d4b01da078803f53ee.png" alt="logo" width="150"></a></div>
+				<div ><a href="https://www.shecodes.io/"><img src="https://www.shecodes.io/assets/branding/logo-shecodes-f9fa0540d113c086f61eb6e89466c0cbd24a42163b6a96d4b01da078803f53ee.png" alt="logo" width="150" class="header-logo"></a></div>
 				<form action="submit" class="search">
 					<div class="row">
 						<div class="col-9">
@@ -25,20 +25,24 @@
 					</div>
 				</form>
 				<div class="main">
-					<div class="row main__left">
-						<div class="col-6 ">
-						<h1 class="main__city-name">San Francisco</h1>
-						<ul class="main__properties">
-							<li>Last updated at: <span id="date">Saturday 21:02 </span></li>
-							<li>Humidity: <span class="red"><span id="humidity">69</span>%</span>, Wind: <spam class="red"><span id="wind">2.57</span>km/h</spam></li>
-							<li><span id="sky">overcast clouds</span></li>
-						</ul>
+					<div class="main__flex">
+						<div class=" main__left">
+							<div class="main__flex-left">
+							<h1 class="main__city-name">San Francisco</h1>
+							<ul class="main__properties">
+								<li>Last updated at: <span id="date">Saturday 21:02 </span></li>
+								<li>Humidity: <span class="red"><span id="humidity">69</span>%</span>, Wind: <spam class="red"><span id="wind">2.57</span>km/h</spam></li>
+								<li><span id="sky">overcast clouds</span></li>
+							</ul>
+							</div>
 						</div>
-						<div class="col-6 main__right">
-							<div class="main__logo"><img src="#" alt="sun" id="main-icon"></div>
-							<div class="main__temperature" id="main-temperature">15</div>
-							<div class="units"><a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link" >°F</a></div>
-							
+						<div class="main__right">
+							<div class="main__flex-right">
+								<div class="main__logo"><img src="#" alt="sun" id="main-icon"></div>
+								<div class="main__temperature" id="main-temperature">15</div>
+								<div class="units"><a href="#" id="celsius-link" class="active">°C</a> <span class="main-line">|</span> <a href="#" id="fahrenheit-link" >°F</a></div>
+					
+							</div>
 						</div>
 					</div>
 				</div>
