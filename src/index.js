@@ -9,6 +9,32 @@ function formData(timeStamp){
 
 }
 
+//forecast
+
+function displayForecast() {
+let forecastElement = document.querySelector("#forecast-item");
+let forecastHTML = "";
+
+let days = ["Mon", "Tue", "Wed"];
+days.forEach(function(day){
+	forecastHTML = forecastHTML + 
+	`<div class="forecast__item" >
+	<div class="forecast__day">
+	${day}
+	</div>
+	<img src="/src/img/download.png" alt="icon" class="forecast__logo" id="forecast-logo">
+	<div class="forecast__temperature">
+	<span class="forecast__max-temp" id="forecast-min-temp">15</span>
+	<span class="forecast__min-temp" id="forecast-max-temp">9</span>
+	</div>
+	</div>`;
+	
+	forecastElement.innerHTML = forecastHTML;
+});
+
+
+}
+
 //search engine
 function search(city){
 let apiKeys = "b83c1d0ca2d9e65fec290817b578d80d";
@@ -62,6 +88,9 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature); 
+
+displayForecast();
+
 
 
 
