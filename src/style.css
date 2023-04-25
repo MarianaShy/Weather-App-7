@@ -123,12 +123,7 @@ li::first-letter{
 	position: relative;
 	top: -16px;
 }
-.units a {
-	text-decoration: none;
-}
-.units a:hover {
-color: #885df1;
-}
+
 .main .active {
 	color: #212121;
 	cursor: default;
