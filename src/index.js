@@ -24,13 +24,13 @@ let forecastElement = document.querySelector("#forecast-item");
 let forecastHTML = "";
 
 forecast.forEach(function(forecastDay, index){
-	if (index < 6 ) {
+	if (index < 5 ) {
 	forecastHTML = forecastHTML + 
 	`<div class="forecast__item" >
 	<div class="forecast__day">
 	${formatDay(forecastDay.dt)}
 	</div>
-	<img src=http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png alt="icon" class="forecast__logo" id="forecast-logo" width=70>
+	<img src=http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png alt="icon" class="forecast__logo" id="forecast-logo">
 	<div class="forecast__temperature">
 	<span class="forecast__max-temp" id="forecast-min-temp">${Math.round(forecastDay.temp.max)}</span>
 	<span class="forecast__min-temp" id="forecast-max-temp">${Math.round(forecastDay.temp.min)}</span>

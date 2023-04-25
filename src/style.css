@@ -196,4 +196,7 @@ li::first-letter{
 	.forecast__min-temp{
 		display: none;
 	}
+	.forecast__logo{
+		width: 70px;
+	}
 }
