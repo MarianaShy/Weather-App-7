@@ -10,23 +10,28 @@ function formData(timeStamp){
 }
 
 //forecast
+function formatDay(timestamp) {
+	let date = new Date(timestamp * 1000);
+	let day = date.getDay();
+	let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+	return days[day];
+}
 
 function displayForecast(response) {
-	console.log(response.data);
+let forecast = response.data.daily;
 let forecastElement = document.querySelector("#forecast-item");
 let forecastHTML = "";
 
-let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-days.forEach(function(day){
+forecast.forEach(function(forecastDay){
 	forecastHTML = forecastHTML + 
 	`<div class="forecast__item" >
 	<div class="forecast__day">
-	${day}
+	${formatDay(forecastDay.dt)}
 	</div>
-	<img src="/src/img/download.png" alt="icon" class="forecast__logo" id="forecast-logo">
+	<img src=http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png alt="icon" class="forecast__logo" id="forecast-logo" width=70>
 	<div class="forecast__temperature">
-	<span class="forecast__max-temp" id="forecast-min-temp">15</span>
-	<span class="forecast__min-temp" id="forecast-max-temp">9</span>
+	<span class="forecast__max-temp" id="forecast-min-temp">${Math.round(forecastDay.temp.max)}</span>
+	<span class="forecast__min-temp" id="forecast-max-temp">${Math.round(forecastDay.temp.min)}</span>
 	</div>
 	</div>`;
 	
