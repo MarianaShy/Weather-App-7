@@ -3,7 +3,7 @@ function formData(timeStamp){
 	let date = new Date(timeStamp);
 	let hours = date.getHours();
 	let minutes = date.getMinutes();
-	let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+	let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 	let day = days[date.getDay()];
 	return `${day} ${hours}:${minutes}`;
 
@@ -18,11 +18,13 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
+
 let forecast = response.data.daily;
 let forecastElement = document.querySelector("#forecast-item");
 let forecastHTML = "";
 
-forecast.forEach(function(forecastDay){
+forecast.forEach(function(forecastDay, index){
+	if (index < 6 ) {
 	forecastHTML = forecastHTML + 
 	`<div class="forecast__item" >
 	<div class="forecast__day">
@@ -36,6 +38,7 @@ forecast.forEach(function(forecastDay){
 	</div>`;
 	
 	forecastElement.innerHTML = forecastHTML;
+}
 });
 
 
@@ -54,8 +57,6 @@ function handleSubmit (event) {
 };
 
 function getForecast(coordinates) {
-console.log(coordinates.lat);
-console.log(coordinates.lon);
 
 let apiKeys = "bb0df6985c2eab6a171d64a6bacbb4e1";
 let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKeys}`;
